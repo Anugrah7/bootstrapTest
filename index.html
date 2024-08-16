@@ -155,86 +155,152 @@
         </div>
     </div>
 
-    <div id="gallery2" class="d-flex flex-wrap justify-content-around">
-        <div class="tiless">
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/vchBIx5tJkc?si=ewHWfOJRtjEyLOXP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="tiless">
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/xugzk7rSC0E?si=fhPJOdtzx0eyCQtX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="gallery2" class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="tiless">
+                    <div class="video-container">
+                        <iframe class="video" src="https://www.youtube.com/embed/vchBIx5tJkc?si=ewHWfOJRtjEyLOXP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="tiless">
+                    <div class="video-container">
+                        <iframe class="video" src="https://www.youtube.com/embed/xugzk7rSC0E?si=fhPJOdtzx0eyCQtX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
+    <style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; 
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+    
     <!-- Rating -->
-     <div id="rating" class="d-flex flex-nowrap flex-wrap justify-content-around">
-        <div class="container d-flex justify-content-center mt-5">
-            <div class="card text-center mb-5">   
-                <div class="circle-image">
-                    <img src="./images/profile.avif" width="50">
-                </div>    
+    <div id="rating" class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-center">
+                    <div class="circle-image mx-auto mt-3">
+                        <img src="./images/profile.avif" width="70" alt="Bryan Williams">
+                    </div>
                     <span class="dot"></span>
-                <span class="name mb-1 fw-500">Bryan Williams</span>
-                <small class="text-black-50">Tata Ace</small>
-                <small class="text-black-50 font-weight-bold">QP09AA9090</small>
-                <div class="location mt-4">
-                   <span class="d-block"><i class="fa fa-map-marker start"></i> <small class="text-truncate ml-2">Ganesha Road, preet vihar new delhi</small> </span>
-                    <span><i class="fa fa-map-marker stop mt-2"></i> <small class="text-truncate ml-2">Mandir Road, Mayur vihar, new delhi</small> </span>              
-                </div>   
-                <div class="rate bg-success py-3 text-white mt-3">   
-                    <h6 class="mb-0">Rate our Guide</h6>
-                    <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                    </div> 
-                    <div class="buttons px-4 mt-0">
-                    <button class="btn btn-warning btn-block rating-submit">Submit</button>
-                </div>            
-                </div>   
+                    <span class="name mb-1 fw-500">Bryan Williams</span>
+                    <small class="text-black-50">Tata Ace</small>
+                    <small class="text-black-50 font-weight-bold">QP09AA9090</small>
+                    <div class="location mt-4">
+                        <span class="d-block">
+                            <i class="fa fa-map-marker start"></i>
+                            <small class="text-truncate ml-2">Ganesha Road, Preet Vihar, New Delhi</small>
+                        </span>
+                        <span>
+                            <i class="fa fa-map-marker stop mt-2"></i>
+                            <small class="text-truncate ml-2">Mandir Road, Mayur Vihar, New Delhi</small>
+                        </span>
+                    </div>
+                    <div class="rate bg-success py-3 text-white mt-3">
+                        <h6 class="mb-0">Rate our Guide</h6>
+                        <div class="rating">
+                            <input type="radio" name="rating1" value="5" id="5-1"><label for="5-1">☆</label>
+                            <input type="radio" name="rating1" value="4" id="4-1"><label for="4-1">☆</label>
+                            <input type="radio" name="rating1" value="3" id="3-1"><label for="3-1">☆</label>
+                            <input type="radio" name="rating1" value="2" id="2-1"><label for="2-1">☆</label>
+                            <input type="radio" name="rating1" value="1" id="1-1"><label for="1-1">☆</label>
+                        </div>
+                        <div class="buttons px-4 mt-3">
+                            <button class="btn btn-warning btn-block rating-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-center">
+                    <div class="circle-image mx-auto mt-3">
+                        <img src="./images/profile2.jpg" width="70" alt="Luke John">
+                    </div>
+                    <span class="dot"></span>
+                    <span class="name mb-1 fw-500">Luke John</span>
+                    <small class="text-black-50">Birla Ace</small>
+                    <small class="text-black-50 font-weight-bold">QP09AA9010</small>
+                    <div class="location mt-4">
+                        <span class="d-block">
+                            <i class="fa fa-map-marker start"></i>
+                            <small class="text-truncate ml-2">Harva Road, Preet Vihar, New Delhi</small>
+                        </span>
+                        <span>
+                            <i class="fa fa-map-marker stop mt-2"></i>
+                            <small class="text-truncate ml-2">Thakur Road, Mayur Vihar, New Delhi</small>
+                        </span>
+                    </div>
+                    <div class="rate bg-success py-3 text-white mt-3">
+                        <h6 class="mb-0">Rate our Guide</h6>
+                        <div class="rating">
+                            <input type="radio" name="rating2" value="5" id="5-2"><label for="5-2">☆</label>
+                            <input type="radio" name="rating2" value="4" id="4-2"><label for="4-2">☆</label>
+                            <input type="radio" name="rating2" value="3" id="3-2"><label for="3-2">☆</label>
+                            <input type="radio" name="rating2" value="2" id="2-2"><label for="2-2">☆</label>
+                            <input type="radio" name="rating2" value="1" id="1-2"><label for="1-2">☆</label>
+                        </div>
+                        <div class="buttons px-4 mt-3">
+                            <button class="btn btn-warning btn-block rating-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-center">
+                    <div class="circle-image mx-auto mt-3">
+                        <img src="./images/profile3.jpeg" width="70" alt="Peter Parker">
+                    </div>
+                    <span class="dot"></span>
+                    <span class="name mb-1 fw-500">Peter Parker</span>
+                    <small class="text-black-50">Queens</small>
+                    <small class="text-black-50 font-weight-bold">QP09AA9990</small>
+                    <div class="location mt-4">
+                        <span class="d-block">
+                            <i class="fa fa-map-marker start"></i>
+                            <small class="text-truncate ml-2">Queens Road, Preet Vihar, California</small>
+                        </span>
+                        <span>
+                            <i class="fa fa-map-marker stop mt-2"></i>
+                            <small class="text-truncate ml-2">Mandir Road, Mayur Vihar, Queens</small>
+                        </span>
+                    </div>
+                    <div class="rate bg-success py-3 text-white mt-3">
+                        <h6 class="mb-0">Rate our Guide</h6>
+                        <div class="rating">
+                            <input type="radio" name="rating3" value="5" id="5-3"><label for="5-3">☆</label>
+                            <input type="radio" name="rating3" value="4" id="4-3"><label for="4-3">☆</label>
+                            <input type="radio" name="rating3" value="3" id="3-3"><label for="3-3">☆</label>
+                            <input type="radio" name="rating3" value="2" id="2-3"><label for="2-3">☆</label>
+                            <input type="radio" name="rating3" value="1" id="1-3"><label for="1-3">☆</label>
+                        </div>
+                        <div class="buttons px-4 mt-3">
+                            <button class="btn btn-warning btn-block rating-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container d-flex justify-content-center mt-5">
-            <div class="card text-center mb-5">   
-                <div class="circle-image">
-                    <img src="./images/profile2.jpg" width="50">
-                </div>    
-                    <span class="dot"></span>
-                <span class="name mb-1 fw-500">Luke John</span>
-                <small class="text-black-50">Birla Ace</small>
-                <small class="text-black-50 font-weight-bold">QP09AA9010</small>
-                <div class="location mt-4">
-                   <span class="d-block"><i class="fa fa-map-marker start"></i> <small class="text-truncate ml-2">Harva Road, preet vihar new delhi</small> </span>
-                    <span><i class="fa fa-map-marker stop mt-2"></i> <small class="text-truncate ml-2">Takur Road, Mayur jihar, new delhi</small> </span>              
-                </div>   
-                <div class="rate bg-success py-3 text-white mt-3">   
-                    <h6 class="mb-0">Rate our Guide</h6>
-                    <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                    </div> 
-                    <div class="buttons px-4 mt-0">
-                    <button class="btn btn-warning btn-block rating-submit">Submit</button>
-                </div>            
-                </div>   
-            </div>
-        </div>
-        <div class="container d-flex justify-content-center mt-5">
-            <div class="card text-center mb-5">   
-                <div class="circle-image">
-                    <img src="./images/profile3.jpeg" width="50">
-                </div>    
-                    <span class="dot"></span>
-                <span class="name mb-1 fw-500">Peter Parker</span>
-                <small class="text-black-50">Queens</small>
-                <small class="text-black-50 font-weight-bold">QP09AA9990</small>
-                <div class="location mt-4">
-                   <span class="d-block"><i class="fa fa-map-marker start"></i> <small class="text-truncate ml-2">Queens Road, preet vihar california</small> </span>
-                    <span><i class="fa fa-map-marker stop mt-2"></i> <small class="text-truncate ml-2">Mandir Road, Mayur vihar, Queens</small> </span>              
-                </div>   
-                <div class="rate bg-success py-3 text-white mt-3">   
-                    <h6 class="mb-0">Rate our Guide</h6>
-                    <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                    </div> 
-                    <div class="buttons px-4 mt-0">
-                    <button class="btn btn-warning btn-block rating-submit">Submit</button>
-                </div>            
-                </div>   
-            </div>
-        </div>
-     </div>
+    </div>
      <!-- Footer -->
      <div class="container-fluid footer" id="footer">
         <div class="row">
